@@ -7,7 +7,7 @@ app = Flask(__name__)
 def mp2_2():
     if request.method == 'POST':
        p = subprocess.Popen(["python3", "stress_cpu.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-       output, errors = p.communicate()
+       #output, errors = p.communicate()
        return "SUCCESS"
     else:
        return socket.gethostname()
